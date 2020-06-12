@@ -21,7 +21,7 @@ from sqlalchemy.ext.declarative import declarative_base
 # Note: User will need to supply their own PostgreSQL password under variable below
 user = 'postgres'
 host = 'localhost'
-password = 'PASSWORD'
+password = 'postgres-2002'
 port = '5432'
 database = 'avg_aqi'
 uri = f'postgresql://{user}:{password}@{host}:{port}/{database}'
@@ -44,7 +44,7 @@ def home():
     return render_template('index.html', state_list=all_states, county_list=all_counties)
 
 # Route to get county name, query DB, and create JSON data for app.js
-@app.route("/county_data" , methods=['GET', 'POST'])
+@app.route("/county_data")
 def county_data():
 
     county = request.args.get('county')
