@@ -1,1 +1,1 @@
-web: gunicorn 04_Deploy.app:app
+web: gunicorn airQuality.app:app
