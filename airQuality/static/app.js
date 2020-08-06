@@ -53,7 +53,7 @@ function buildPlot(county) {
 }
 
 // Select dropdown menu using D3
-var selectDrop = d3.select("#selDataset");
+var selectDrop = d3.select("#selCounty");
 
 
 // Create event handler
@@ -72,8 +72,3 @@ function runEnter() {
 
     buildPlot(userCounty);
 };
-
-
-
-
-

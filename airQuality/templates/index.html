@@ -22,7 +22,14 @@
       <div class="col-md-2">
         <div class="well" style="background-image: linear-gradient(darkorange, black);">
           <h5 style="color: powderblue;">Individual county analysis</h5>
-          <select id="selDataset">
+          <select id="selState">
+            <option value="" disabled selected>Individual state level</option>
+            {% for state in state_list %}
+            <option value="{{ state }}">{{ state }}</option>
+            {% endfor %} 
+          </select>
+          <h5 style="color: powderblue;">Individual county level</h5>
+          <select id="selCounty">
             <option value="" disabled selected>Select county</option>
             {% for county in county_list %}
             <option value="{{ county }}">{{ county }}</option>
